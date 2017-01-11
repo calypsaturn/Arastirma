@@ -1,0 +1,124 @@
+= MATAS
+
+== Java Server Faces
+
+=== Hande AYDEMİR           130201003
+=== Ayşegül UĞUZ            130201089
+
+==== Kocaeli Üniversitesi
+==== Bilgisayar Mühendisliği
+==== Gömülü Sistem Laboratuvarı
+
+=== İçindekiler
+
+==== 1.	PROBLEMİN TANIMI VE ÇALIŞMANIN AMACI
+==== 2.	ÇALIŞMADA KULLANILAN YÖNTEMLER VE METODLAR
+==== 2.1.	JAVA Nedir?
+==== 2.1.1.	Java Programlama Dili ve Kullanım Alanları
+==== 2.2.	Java Server Faces Nedir?
+==== 2.2.1.	Java Server Faces Özellikleri
+==== 2.3.	Yazılımın Çalışma Şekli ve Açıklanması
+==== 2.3.1.	Login Olma İşlemi
+==== 2.3.2.	Ana Menüye Yönlendirilme
+==== 2.3.3.	Eser Ekleme ve Güncelleme Sayfası
+==== 3.	SONUÇLAR
+
+==== 1. PROBLEMİN TANIMI VE ÇALIŞMANIN AMACI
+Müzeler oldukça çeşitli ve değerli eserlere ev sahipliği yapmaktadır. Tarih boyunca yaşamış medeniyetlerin
+günümüze bıraktığı bu çok önemli ve değerli eserler, her gün birçok ziyaretçiye sunulmaktadır. Müzelerdeki
+bu eserlerin çokluğu ve müze yapılarının karmaşıklığı ise ziyaretçilere verilen hizmet kalitesini oldukça etkilemektedir.
+Ziyaretçileri daha iyi bilgilendirmek ve aydınlatmak, onları tarihin derinliklerini yansıtabilmek için bilgilendirme
+şekilleri önemli bir yer tutar. Aynı zamanda nu özellikler halkın tarihe karşı ilgisini ve bilincini şekillendirmektedir.   
+Teknolojinin gelişmesiyle beraber bilginin paylaşımı ve paylaşım hızı gibi faktörleri daha iyi bir hal almıştır. Bu nedenle
+müze sistemlerinde de teknolojiyi dahil etmek birçok açıdan avantaj sağlamaktadır. Müze Akıllı Takip Sisteminde bulut tabanlı
+sunucu/istemci mimarisi sayesinde müze içerisindeki her bir eserin bilgileri müzeye ait yerel bir sunucuya kaydedilerek müze
+dışında bulunan bulut tabanlı bir sistemle senkronize edilmektedir. Bulutta bulunan güncel eser bilgileri web servis teknolojileri
+kullanılarak ziyaretçilerin mobil cihazlarına aktarılmaktadır. Ayrıca, aynı bilgiler eseler yakınında bulunan tabletler aracılığıyla
+ziyaretçilere güncel ve hızlı bilgi aktarımı gerçekleştirilmektedir. Müzeler için geliştirilen bu sistem bulut desteği sayesinde
+tek bir müze yerine birden fazla müzeyi dinamik bir şekilde yönetebilme imkânını sunmaktadır. Ayrıca müzelerde bulunan yerel
+sunucular ile bulut arasında eserlere ait içerik senkronizasyonu yapılabilmektedir. Aynı zamanda müze yönetim sistemi arasında da
+kolaylık sunmakta ve güncel verilerin görüntülenmesi ağlanmaktadır. 
+
+==== 2.	ÇALIŞMADA KULLANILAN YÖNTEMLER
+Proje kapsamında biz şu ana kadar kullanıcı seneryolarıyla ilgilenerek kullanıcı arayüzlerinin bir kısmını oluşturmayı ve
+işlevsellik kazandırmayı amaçladık. Web arayüzü için Java Server Faces teknolojisi kullanılmıştır. 
+
+==== 2.1.	JAVA Nedir?
+Java, Sun Microsystems mühendislerinden James Gosling tarafından geliştirilmeye başlanmış açık kodlu, nesneye yönelik,
+zeminden bağımsız, yüksek verimli, çok işlevli, yüksek seviye, adım adım işletilen (yorumlanan-interpreted) bir dildir.
+Java, Sun Microsystems'den James Gosling tarafından geliştirilen bir programlama dilidir (Sun Microsystem'in şu anda
+Oracle Corporation ile bağlı ortaklığı bulunmaktadır) ve 1995 yılında Sun Microsystems'in çekirdek bileşeni olarak
+piyasaya sürülmüştür. Bu dil C ve C++'dan birçok sözdizim türetmesine rağmen bu türevler daha basit nesne modeli ve
+daha az düşük seviye olanaklar içerir. Java uygulamaları bilgisayar mimarisine bağlı olmadan herhangi bir
+Java Virtual Machine (JVM)'de çalışabilen tipik bytecode'dur (sınıf dosyası). Java ilk çıktığında daha çok küçük cihazlarda
+kullanılmak için tasarlanmış ortak bir düzlem dili olarak düşünülmüştü. Ancak düzlem bağımsızlığı özelliği ve tekbiçim
+kütüphane desteği C ve C++'tan çok daha üstün ve güvenli bir yazılım geliştirme ve işletme ortamı sunduğundan, hemen her yerde
+kullanılmaya başlanmıştır. Şu anda özellikle kurumsal alanda ve mobil cihazlarda son derece popüler olan Java özellikle
+J2SE 1.4 ve 5 sürümü ile masaüstü uygulamalarda da yaygınlaşmaya başlamıştır. Java'nin ilk sürümü olan Java 1.0 (1995)
+Java Platform 1 olarak adlandırıldı ve tasarlama amacına uygun olarak küçük boyutlu ve kısıtlı özelliklere sahipti.
+Daha sonra düzlemin gücü gözlendi ve tasarımında büyük değişiklikler ve eklemeler yapıldı. Bu büyük değişikliklerden dolayı
+geliştirilen yeni düzleme Java Platform 2 adı verildi ama sürüm numarası 2 yapılmadı, 1.2 olarak devam etti. 2004 sonbaharında
+çıkan Java 5, geçmiş 1.2, 1.3 ve 1.4 sürümlerinin ardından en çok gelişme ve değişikliği barındıran sürüm oldu. Java SE 7 ise
+(kod adı Dolphin) Sun'un üzerinde çalıştığı, Java teknolojisinin günümüz sürümüdür. 13 Kasım 2006'da Java düzlemi GPL ruhsatıyla
+açık kodlu hale gelmiştir.
+
+==== 2.1.1.	Java Programlama Dili
+      Java; Java geliştiricileri, mimarları ve gönüllülerden oluşan özel bir topluluk tarafından test edilmiştir,
+      iyileştirilmiştir, genişletilmiştir ve onaylanmıştır. Java, bilgisayar platformları için mümkün olan en geniş
+      kapsamda taşınabilir, yüksek performanslı uygulamaların geliştirilmesine olanak sağlayacak şekilde tasarlanmıştır.
+      Uygulamaları heterojen platformlar üzerinde kullanılabilir hale getirerek iş sahipleri daha fazla hizmet sunabilir
+      ve son kullanıcı üretkenliği, iletişim ve işbirliğini artırabilirler. Ayrıca kurumsal uygulamalara ve tüketici
+      uygulamalarına sahip olma maliyetini önemli derecede düşürebilirler. Sunduğu aşağıdaki olanaklar ile Java,
+      geliştiriciler için son derece önemli hale gelmiştir: 
+      
+-	Yazılımı bir platformda yazmak ve diğer bir sanal platformda çalıştırmak 
+-	Web tarayıcısı ve erişilebilir Web hizmetleriyle çalışacak programlar yaratmak
+-	Çevrimiçi forumlar, mağazalar, anketler, HTML formlarını işleme ve daha fazlası için sunucu tarafı uygulamaları geliştirme 
+-	Cep telefonları, uzak işlemciler, mikro denetçiler, kablosuz modüller, sensörler, ağ geçitleri, tüketici ürünleri ve 
+neredeyse tüm elektronik aygıtlar için güçlü ve verimli uygulamalar yazma.
+
+==== 2.2.	Java Server Faces Nedir?
+JavaServer Faces (JSF), Java tabanlı web uygulamalarını kolaylaştırmak için Model-View-Controller (MVC) yapısına uygun olarak
+geliştirilmiş bir şartnamedir (framework). Klasik talep tekileşimli MVC (request driven Model View Controller) yapısından farklı
+olarak JSF bileşen bazlı yaklaşımı kullanır. Yani istemci tarafında bir sayfadan başka sayfaya geçildiğinde JSF tarafında eski
+sayfa bileşenleri saklanır ve bu sayfaya geri dönüldüğünde saklanan bu bileşenler yüklenir.
+2.2.1.	Java Server Faces Özellikleri
+-	Bileşen bazlı arayüz teknolojisi. Yani kullanılan bileşenlerin durumlarını (state) tutabilen, bu bileşenler üzerindeki eylemleri
+(event) takip edebilen, giriş değerlerini doğrulayabilen (validation), değerleri dönüştürebilen (converting), sayfa yönlendirmeleri
+(navigation) tanımlayabilen ve uluslar arası standartları destekleyebilen (dil, para birimi, klavye gibi (internationalization)
+bir uygulama geliştirme arayüzüdür (application programming interface , API)
+
+-	SF ayrıca sabit arayüz bileşenleri sunmaktadır ve geliştirici bu arayüz bileşenlerini kullanarak site geliştirebilmektedir.
+-	JSP içerisindeki özel etiketler (tag) ile geliştiricilerin JSF sayfaları yazması mümkündür.
+-	Sunucu tarafında etkileşimli olarak eylemlerin kontrol edilmesi mümkündür.
+- Sunucu tarafında durumun (state) saklanması ve kullanılması mümkündür.
+-	Yönetilen Çekirdek (managed beans) kullanmaya imkan sağlar (yönetilen çekirdekler kabaca JAVA çekirdeklerinin (JAVA Beans)
+bağımlılık zerk edilmiş halidir (dependency injection)
+-	Ayrıca JSF 1.2’den sonra ve JSP 2.0’dan sonraki sürümlerde Birleştirilmiş İşlem Dili (unified expression language) desteği
+bulunmaktadır.
+
+==== 2.3.	Yazılım Çalışmasının Şekli ve Açıklanması
+Projede öncelikle web arayüzü gerçekleştirilmiştir. Java Server Faces yöntemi ve veritabanı işlemleri için de MySQL WorkBench
+kullanılmıştır. Bu müzedeki yönetim sistemine ait kullanıcı ara yüzüdür. Müzeye yeni bir eser eklendiğinde eser bilgilerini
+ekleme, var olan eser için bilgileri güncelleme, çıkarılan eserler için silme ve aynı zamanda bu eserlere ait medya bilgilerinin
+eklenip güncellendiği kısımdır.Bütün bunlar için öncelikle login işlemi gerçekleştirilmiştir. 
+
+==== 2.3.1.	Login Olma İşlemi
+Login olma işlemi için yan taraftaki şekilde gibi basit bir arayüz hazırlanmıştır. Bu sayfa için index.xhtml kısmında sayfa
+arayüzü oluşturulmuş ve varitabanında da kullanici adında tablo oluşturularak buna kullanıcı adı ve şifre bilgileri kaydedilmiştir.
+Girilen kullanıcı adının veritabanındaki kullanıcı adıyla eşleşip eşleşmemesinin kontrolü de bu sayfaya ait Managed Bean yapısı olan LoginBean.java içerisinde gerçekleştirilmiştir. 
+
+==== 2.3.2.	Ana Menüye Yönlendirilme
+Login işlemi sonrasında kullanıcı seçim yapacağı sayfaya yönlenrilir. Bu sayfada eser ekleme, eser medya ekleme, sunum hazırlama
+gibi sayfalarına yönlendirmeler bulunmaktadır.
+
+==== 2.3.3.	Eser Ekleme ve Güncelleme Sayfası 
+Bu sayfada kullanıcı müze veritabanına yeni eser ekleme işlemini gerçekleştirmektedir. Yeni eserler eklenirken mevcut olan diğer
+eserlerin bir grid içerisinde görüntülenmesi sağlanmıştır. Bu sayfada aynı zamanda daha önceden eklenmiş olan eserlere ait düzeltme
+işlemi de gerçekleştirilmektedir. Grid kullanarak bu işlemin görsel açıdan daha iyi olması sağlanmıştır. Görüntülenen gride “Düzenle”
+isminde yeni bir sütun eklenerek düzeltme işleminin daha kullanışlı gerçekleştirilmesi sağlanmıştır. Güncelleme işlemi bittiğinde
+veritabanında da güncelleme yapılmaktadır.  
+
+==== 3.	SONUÇ
+
+
